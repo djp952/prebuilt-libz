@@ -36,7 +36,7 @@ export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
 cd zlib
-CFLAGS=-m32 ./configure --static
+CFLAGS="-m32 -fPIC" ./configure --static
 make
 ```
    
@@ -50,7 +50,7 @@ export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
 cd zlib
-./configure --static
+CFLAGS=-fPIC ./configure --static
 make
 ```
    
