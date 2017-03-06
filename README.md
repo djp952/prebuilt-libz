@@ -1,4 +1,4 @@
-#LIBZ 1.2.8
+#LIBZ 1.2.11
 [http://www.zlib.net/](http://www.zlib.net/)   
   
 **TARGETS**   
@@ -6,6 +6,7 @@
 * linux-x86_64 (gcc-4.9)   
 * android-armeabi-v7a (ndk-r12b/api-21)   
 * android-arm64-v8a (ndk-r12b/api-21)  
+* android-x86 (ndk-r12b/api-21)   
    
 **BUILD ENVIRONMENT**  
 * Windows 10 x64 15025   
@@ -32,7 +33,7 @@ android-ndk-r12b/build/tools/make_standalone_toolchain.py --arch x86 --api 21 --
 **BUILD LIBZ (linux-i686)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -46,7 +47,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (linux-x86_64)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -60,7 +61,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-armeabi-v7a)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/arm-linux-androideabi/bin:$PATH
 export CROSS_COMPILE=arm-linux-androideabi-
@@ -77,7 +78,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-arm64-v8a)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/aarch64-linux-android/bin:$PATH
 export CROSS_COMPILE=aarch64-linux-android-
@@ -94,7 +95,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-x86)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/i686-linux-android/bin:$PATH
 export CROSS_COMPILE=i686-linux-android-
