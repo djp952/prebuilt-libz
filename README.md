@@ -159,3 +159,19 @@ make
    
 Get zlib.h, zconf.h and libz.a from zlib 
    
+**BUILD LIBZ (raspbian-armhf)**   
+Open "Bash on Ubuntu on Windows"   
+```
+git clone https://github.com/raspberrypi/tools.git raspberrypi --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+export PATH=$(pwd)/raspberrypi/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export CC=arm-linux-gnueabihf-gcc
+export AR=arm-linux-gnueabihf-gcc-ar
+export RANLIB=arm-linux-gnueabihf-gcc-ranlib
+cd zlib
+CFLAGS="-fPIC" ./configure --static
+make
+```
+   
+Get zlib.h, zconf.h and libz.a from zlib   
