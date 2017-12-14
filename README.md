@@ -1,4 +1,4 @@
-# LIBZ 1.2.8
+# LIBZ 1.2.11
 [http://www.zlib.net/](http://www.zlib.net/)   
   
 **TARGETS**   
@@ -39,7 +39,7 @@ android-ndk-r12b/build/tools/make_standalone_toolchain.py --arch x86 --api 21 --
 **BUILD LIBZ (linux-i686)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -53,7 +53,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (linux-x86_64)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -67,7 +67,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (linux-armel)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export CC=arm-linux-gnueabi-gcc-4.9
 export AR=arm-linux-gnueabi-gcc-ar-4.9
@@ -82,7 +82,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (linux-armhf)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export CC=arm-linux-gnueabihf-gcc-4.9
 export AR=arm-linux-gnueabihf-gcc-ar-4.9
@@ -97,7 +97,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (linux-aarch64)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export CROSS_COMPILE=aarch64-linux-gnu-
 export CC=aarch64-linux-gnu-gcc-4.9
 export AR=aarch64-linux-gnu-gcc-ar-4.9
@@ -112,7 +112,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-armeabi-v7a)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/arm-linux-androideabi/bin:$PATH
 export CROSS_COMPILE=arm-linux-androideabi-
@@ -129,7 +129,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-arm64-v8a)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/aarch64-linux-android/bin:$PATH
 export CROSS_COMPILE=aarch64-linux-android-
@@ -146,7 +146,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 **BUILD LIBZ (android-x86)**   
 Open "Bash on Ubuntu on Windows"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export ANDROID_NDK_ROOT=$(pwd)/android-ndk-r12b
 export PATH=$(pwd)/i686-linux-android/bin:$PATH
 export CROSS_COMPILE=i686-linux-android-
@@ -164,7 +164,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 Open "Bash on Ubuntu on Windows"   
 ```
 git clone https://github.com/raspberrypi/tools.git raspberrypi --depth=1
-git clone https://github.com/madler/zlib.git -b v1.2.8 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export PATH=$(pwd)/raspberrypi/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export CC=arm-linux-gnueabihf-gcc
