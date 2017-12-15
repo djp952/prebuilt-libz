@@ -13,8 +13,8 @@
 * rasbpian-armhf (gcc-4.8.3)   
    
 **BUILD ENVIRONMENT**  
-* Windows 10 x64 15063   
-* Bash on Ubuntu on Windows 16.04.1 LTS   
+* Windows 10 x64 16299 "Fall Creator's Update"   
+* Bash on Ubuntu on Windows 16.04.2 LTS   
 
 **CONFIGURE BASH ON UBUNTU ON WINDOWS**   
 Open "Bash on Ubuntu on Windows"   
@@ -68,7 +68,7 @@ Get zlib.h, zconf.h and libz.a from zlib
 Open "Bash on Ubuntu on Windows"   
 ```
 git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
-export CROSS_COMPILE=arm-linux-gnueabihf-
+export CROSS_COMPILE=arm-linux-gnueabi-
 export CC=arm-linux-gnueabi-gcc-4.9
 export AR=arm-linux-gnueabi-gcc-ar-4.9
 export RANLIB=arm-linux-gnueabi-gcc-ranlib-4.9
