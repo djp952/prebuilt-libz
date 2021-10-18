@@ -11,10 +11,6 @@
 * android-21-arm64-v8a (ndk-r20b/api-21)   
 * android-21-x86 (ndk-r20b/api-21)   
 * android-21-x86_64 (ndk-r20b/api-21)   
-* android-28-armeabi-v7a (ndk-r20b/api-21)   
-* android-28-arm64-v8a (ndk-r20b/api-21)   
-* android-28-x86 (ndk-r20b/api-21)   
-* android-28-x86_64 (ndk-r20b/api-21)   
 * rasbpian-armhf (gcc-4.8.3)   
 * osx-x86_64 (apple-darwin15)   
    
@@ -193,78 +189,6 @@ export AR=$TOOLCHAIN/bin/x86_64-linux-android-ar
 export AS=$TOOLCHAIN/bin/x86_64-linux-android-as
 export CC=$TOOLCHAIN/bin/x86_64-linux-android21-clang
 export CXX=$TOOLCHAIN/bin/x86_64-linux-android21-clang++
-export LD=$TOOLCHAIN/bin/x86_64-linux-android-ld
-export RANLIB=$TOOLCHAIN/bin/x86_64-linux-android-ranlib
-export STRIP=$TOOLCHAIN/bin/x86_64-linux-android-strip
-cd zlib
-./configure --static
-make
-```
-Get zlib.h, zconf.h and libz.a from zlib   
-   
-**BUILD LIBZ (android-28-armeabi-v7a)**   
-Open "Ubuntu 18.04 LTS"   
-```
-git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
-export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
-export AR=$TOOLCHAIN/bin/arm-linux-androideabi-ar
-export AS=$TOOLCHAIN/bin/arm-linux-androideabi-as
-export CC=$TOOLCHAIN/bin/armv7a-linux-androideabi28-clang
-export CXX=$TOOLCHAIN/bin/armv7a-linux-androideabi28-clang++
-export LD=$TOOLCHAIN/bin/arm-linux-androideabi-ld
-export RANLIB=$TOOLCHAIN/bin/arm-linux-androideabi-ranlib
-export STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
-cd zlib
-./configure --static
-make
-```
-Get zlib.h, zconf.h and libz.a from zlib   
-   
-**BUILD LIBZ (android-28-arm64-v8a)**   
-Open "Ubuntu 18.04 LTS"   
-```
-git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
-export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
-export AR=$TOOLCHAIN/bin/aarch64-linux-android-ar
-export AS=$TOOLCHAIN/bin/aarch64-linux-android-as
-export CC=$TOOLCHAIN/bin/aarch64-linux-android28-clang
-export CXX=$TOOLCHAIN/bin/aarch64-linux-android28-clang++
-export LD=$TOOLCHAIN/bin/aarch64-linux-android-ld
-export RANLIB=$TOOLCHAIN/bin/aarch64-linux-android-ranlib
-export STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
-cd zlib
-./configure --static
-make
-```
-Get zlib.h, zconf.h and libz.a from zlib   
-   
-**BUILD LIBZ (android-28-x86)**   
-Open "Ubuntu 18.04 LTS"   
-```
-git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
-export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
-export AR=$TOOLCHAIN/bin/i686-linux-android-ar
-export AS=$TOOLCHAIN/bin/i686-linux-android-as
-export CC=$TOOLCHAIN/bin/i686-linux-android28-clang
-export CXX=$TOOLCHAIN/bin/i686-linux-android28-clang++
-export LD=$TOOLCHAIN/bin/i686-linux-android-ld
-export RANLIB=$TOOLCHAIN/bin/i686-linux-android-ranlib
-export STRIP=$TOOLCHAIN/bin/i686-linux-android-strip
-cd zlib
-./configure --static
-make
-```
-Get zlib.h, zconf.h and libz.a from zlib   
-   
-**BUILD LIBZ (android-28-x86_64)**   
-Open "Ubuntu 18.04 LTS"   
-```
-git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
-export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
-export AR=$TOOLCHAIN/bin/x86_64-linux-android-ar
-export AS=$TOOLCHAIN/bin/x86_64-linux-android-as
-export CC=$TOOLCHAIN/bin/x86_64-linux-android28-clang
-export CXX=$TOOLCHAIN/bin/x86_64-linux-android28-clang++
 export LD=$TOOLCHAIN/bin/x86_64-linux-android-ld
 export RANLIB=$TOOLCHAIN/bin/x86_64-linux-android-ranlib
 export STRIP=$TOOLCHAIN/bin/x86_64-linux-android-strip
