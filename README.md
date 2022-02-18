@@ -12,7 +12,7 @@
 * android-21-x86 (ndk-r20b/api-21)   
 * android-21-x86_64 (ndk-r20b/api-21)   
 * rasbpian-armhf (gcc-4.8.3)   
-* osx-x86_64 (apple-darwin15)   
+* osx-x86_64 (apple-darwin19)   
    
 **BUILD ENVIRONMENT**  
 * Windows 10 x64 20H2 (19042)   
@@ -37,13 +37,15 @@ wget https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip
 7z x android-ndk-r20b-linux-x86_64.zip
 ```
   
-**CONFIGURE OSXCROSS CROSS-COMPILER**   
-* Generate the MAC OSX 10.11 SDK Package for OSXCROSS by following the instructions provided at [PACKAGING THE SDK](https://github.com/tpoechtrager/osxcross#packaging-the-sdk).  The suggested version of Xcode to use when generating the SDK package is Xcode 7.3.1 (May 3, 2016).
+**BUILD OSXCROSS CROSS-COMPILER**   
+* Download [Xcode 11.3.1](https://download.developer.apple.com/Developer_Tools/Xcode_11.3.1/Xcode_11.3.1.xip) __(Account required)__ to a location accessible to the WSL Ubuntu 18.04 LTS Distro
 * Open "Ubuntu 18.04 LTS"   
 ```
-sudo apt-get install cmake clang llvm-dev libxml2-dev uuid-dev libssl-dev libbz2-dev zlib1g-dev
+sudo apt-get install cmake clang llvm-dev liblzma-dev libxml2-dev uuid-dev libssl-dev libbz2-dev zlib1g-dev
+cp {Xcode_11.3.1.xip} ~/
 git clone https://github.com/tpoechtrager/osxcross --depth=1
-cp {MacOSX10.11.sdk.tar.bz2} osxcross/tarballs/
+osxcross/tools/gen_sdk_package_pbzx.sh ~/Xcode_11.3.1.xip
+mv osxcross/MacOSX10.15.sdk.tar.xz osxcross/tarballs/
 UNATTENDED=1 osxcross/build.sh
 osxcross/build_compiler_rt.sh
 sudo mkdir -p /usr/lib/llvm-6.0/lib/clang/6.0.0/include
@@ -215,15 +217,15 @@ make
    
 Get zlib.h, zconf.h and libz.a from zlib   
    
-   **BUILD LIBZ (osx-x86_64)**   
+**BUILD LIBZ (osx-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
 ```
 git clone https://github.com/madler/zlib.git -b v1.2.11 --depth=1
 export PATH=$(pwd)/osxcross/target/bin:$PATH
-export CROSS_COMPILE=x86_64-apple-darwin15-
-export CC=x86_64-apple-darwin15-clang
-export AR=x86_64-apple-darwin15-ar
-export RANLIB=x86_64-apple-darwin15-ranlib
+export CROSS_COMPILE=x86_64-apple-darwin19-
+export CC=x86_64-apple-darwin19-clang
+export AR=x86_64-apple-darwin19-ar
+export RANLIB=x86_64-apple-darwin19-ranlib
 export PATH=$(pwd)/osxcross/target/bin:$PATH
 cd zlib
 CFLAGS="-fPIC" ./configure --static
