@@ -63,11 +63,11 @@ export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
 cd zlib
-CFLAGS="-m32 -fPIC -I/usr/include/i386-linux-gnu" ./configure --static
-make
+CFLAGS="-m32 -fPIC -I/usr/include/i386-linux-gnu" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib 
+Get files from zlib/out 
    
 **BUILD LIBZ (linux-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
@@ -77,11 +77,11 @@ export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
 cd zlib
-CFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu" ./configure --static
-make
+CFLAGS="-fPIC -I/usr/include/x86_64-linux-gnu" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib 
+Get files from zlib/out 
    
 **BUILD LIBZ (linux-armel)**   
 Open "Ubuntu 18.04 LTS"   
@@ -92,11 +92,11 @@ export CC=arm-linux-gnueabi-gcc-4.9
 export AR=arm-linux-gnueabi-gcc-ar-4.9
 export RANLIB=arm-linux-gnueabi-gcc-ranlib-4.9
 cd zlib
-CFLAGS="-fPIC" ./configure --static
-make
+CFLAGS="-fPIC" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib 
+Get files from zlib/out 
    
 **BUILD LIBZ (linux-armhf)**   
 Open "Ubuntu 18.04 LTS"   
@@ -107,11 +107,11 @@ export CC=arm-linux-gnueabihf-gcc-4.9
 export AR=arm-linux-gnueabihf-gcc-ar-4.9
 export RANLIB=arm-linux-gnueabihf-gcc-ranlib-4.9
 cd zlib
-CFLAGS="-fPIC" ./configure --static
-make
+CFLAGS="-fPIC" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib 
+Get files from zlib/out 
    
 **BUILD LIBZ (linux-aarch64)**   
 Open "Ubuntu 18.04 LTS"   
@@ -122,11 +122,11 @@ export CC=aarch64-linux-gnu-gcc-4.9
 export AR=aarch64-linux-gnu-gcc-ar-4.9
 export RANLIB=aarch64-linux-gnu-gcc-ranlib-4.9
 cd zlib
-CFLAGS="-fPIC" ./configure --static
-make
+CFLAGS="-fPIC" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib 
+Get files from zlib/out 
    
 **BUILD LIBZ (android-21-armeabi-v7a)**   
 Open "Ubuntu 18.04 LTS"   
@@ -141,10 +141,10 @@ export LD=$TOOLCHAIN/bin/arm-linux-androideabi-ld
 export RANLIB=$TOOLCHAIN/bin/arm-linux-androideabi-ranlib
 export STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
 cd zlib
-./configure --static
-make
+./configure --static --prefix=$(pwd)/out
+make && make install
 ```
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 **BUILD LIBZ (android-21-arm64-v8a)**   
 Open "Ubuntu 18.04 LTS"   
@@ -159,10 +159,10 @@ export LD=$TOOLCHAIN/bin/aarch64-linux-android-ld
 export RANLIB=$TOOLCHAIN/bin/aarch64-linux-android-ranlib
 export STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
 cd zlib
-./configure --static
-make
+./configure --static --prefix=$(pwd)/out
+make && make install
 ```
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 **BUILD LIBZ (android-21-x86)**   
 Open "Ubuntu 18.04 LTS"   
@@ -177,10 +177,10 @@ export LD=$TOOLCHAIN/bin/i686-linux-android-ld
 export RANLIB=$TOOLCHAIN/bin/i686-linux-android-ranlib
 export STRIP=$TOOLCHAIN/bin/i686-linux-android-strip
 cd zlib
-./configure --static
-make
+./configure --static --prefix=$(pwd)/out
+make && make install
 ```
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 **BUILD LIBZ (android-21-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
@@ -195,10 +195,10 @@ export LD=$TOOLCHAIN/bin/x86_64-linux-android-ld
 export RANLIB=$TOOLCHAIN/bin/x86_64-linux-android-ranlib
 export STRIP=$TOOLCHAIN/bin/x86_64-linux-android-strip
 cd zlib
-./configure --static
-make
+./configure --static --prefix=$(pwd)/out
+make && make install
 ```
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 **BUILD LIBZ (raspbian-armhf)**   
 Open "Ubuntu 18.04 LTS"   
@@ -211,11 +211,11 @@ export CC=arm-linux-gnueabihf-gcc
 export AR=arm-linux-gnueabihf-gcc-ar
 export RANLIB=arm-linux-gnueabihf-gcc-ranlib
 cd zlib
-CFLAGS="-fPIC" ./configure --static
-make
+CFLAGS="-fPIC" ./configure --static --prefix=$(pwd)/out
+make && make install
 ```
    
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 **BUILD LIBZ (osx-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
@@ -228,10 +228,11 @@ export AR=x86_64-apple-darwin19-ar
 export RANLIB=x86_64-apple-darwin19-ranlib
 export PATH=$(pwd)/osxcross/target/bin:$PATH
 cd zlib
-CFLAGS="-fPIC" ./configure --static
+CFLAGS="-fPIC" ./configure --static --prefix=$(pwd)/out
 OSXCROSS_NO_EXTENSION_WARNINGS=1 make
+OSXCROSS_NO_EXTENSION_WARNINGS=1 make install
 ```
-Get zlib.h, zconf.h and libz.a from zlib   
+Get files from zlib/out   
    
 ## ADDITIONAL LICENSE INFORMATION
    
