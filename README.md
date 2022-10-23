@@ -1,4 +1,4 @@
-# LIBZ 1.2.12
+# LIBZ 1.2.13
 [http://www.zlib.net/](http://www.zlib.net/)   
   
 **TARGETS**   
@@ -58,7 +58,7 @@ sudo cp -v $(pwd)/osxcross/build/compiler-rt/compiler-rt/build/lib/darwin/*.dyli
 **BUILD LIBZ (linux-i686)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -72,7 +72,7 @@ Get files from zlib/out
 **BUILD LIBZ (linux-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export CC=gcc-4.9
 export AR=gcc-ar-4.9
 export RANLIB=gcc-ranlib-4.9
@@ -86,7 +86,7 @@ Get files from zlib/out
 **BUILD LIBZ (linux-armel)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export CROSS_COMPILE=arm-linux-gnueabi-
 export CC=arm-linux-gnueabi-gcc-4.9
 export AR=arm-linux-gnueabi-gcc-ar-4.9
@@ -101,7 +101,7 @@ Get files from zlib/out
 **BUILD LIBZ (linux-armhf)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export CC=arm-linux-gnueabihf-gcc-4.9
 export AR=arm-linux-gnueabihf-gcc-ar-4.9
@@ -116,7 +116,7 @@ Get files from zlib/out
 **BUILD LIBZ (linux-aarch64)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export CROSS_COMPILE=aarch64-linux-gnu-
 export CC=aarch64-linux-gnu-gcc-4.9
 export AR=aarch64-linux-gnu-gcc-ar-4.9
@@ -131,7 +131,7 @@ Get files from zlib/out
 **BUILD LIBZ (android-21-armeabi-v7a)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
 export AR=$TOOLCHAIN/bin/arm-linux-androideabi-ar
 export AS=$TOOLCHAIN/bin/arm-linux-androideabi-as
@@ -149,7 +149,7 @@ Get files from zlib/out
 **BUILD LIBZ (android-21-arm64-v8a)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
 export AR=$TOOLCHAIN/bin/aarch64-linux-android-ar
 export AS=$TOOLCHAIN/bin/aarch64-linux-android-as
@@ -167,7 +167,7 @@ Get files from zlib/out
 **BUILD LIBZ (android-21-x86)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
 export AR=$TOOLCHAIN/bin/i686-linux-android-ar
 export AS=$TOOLCHAIN/bin/i686-linux-android-as
@@ -185,7 +185,7 @@ Get files from zlib/out
 **BUILD LIBZ (android-21-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export TOOLCHAIN=$(pwd)/android-ndk-r20b/toolchains/llvm/prebuilt/linux-x86_64
 export AR=$TOOLCHAIN/bin/x86_64-linux-android-ar
 export AS=$TOOLCHAIN/bin/x86_64-linux-android-as
@@ -204,7 +204,7 @@ Get files from zlib/out
 Open "Ubuntu 18.04 LTS"   
 ```
 git clone https://github.com/raspberrypi/tools.git raspberrypi --depth=1
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export PATH=$(pwd)/raspberrypi/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export CC=arm-linux-gnueabihf-gcc
@@ -220,7 +220,7 @@ Get files from zlib/out
 **BUILD LIBZ (osx-x86_64)**   
 Open "Ubuntu 18.04 LTS"   
 ```
-git clone https://github.com/madler/zlib.git -b v1.2.12 --depth=1
+git clone https://github.com/madler/zlib.git -b v1.2.13 --depth=1
 export PATH=$(pwd)/osxcross/target/bin:$PATH
 export CROSS_COMPILE=x86_64-apple-darwin19-
 export CC=x86_64-apple-darwin19-clang
